@@ -1,0 +1,8 @@
+packages:
+  - app
+  - local-admin
+
+onlyBuiltDependencies:
+  - esbuild
+allowBuilds:
+  esbuild: true

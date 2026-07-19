@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="t d">
+  <title id="t">凉拌黄瓜原创插画封面</title><desc id="d">LookCook 脚本生成的抽象餐盘插画</desc>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4da66a"/><stop offset="1" stop-color="#b8d680"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-opacity=".18"/></filter></defs>
+  <rect width="960" height="640" rx="48" fill="url(#g)"/><circle cx="785" cy="100" r="170" fill="#fff" opacity=".12"/><circle cx="110" cy="560" r="210" fill="#fff" opacity=".09"/>
+  <g filter="url(#s)"><ellipse cx="480" cy="337" rx="275" ry="200" fill="#fff7e9"/><ellipse cx="480" cy="337" rx="220" ry="151" fill="#4da66a" opacity=".34"/><circle cx="418" cy="315" r="74" fill="#b8d680" opacity=".92"/><circle cx="535" cy="365" r="87" fill="#4da66a" opacity=".84"/><circle cx="566" cy="284" r="54" fill="#fff2b0" opacity=".8"/><path d="M354 386c85-98 186-113 282-45-64 96-194 123-282 45Z" fill="#5f9362" opacity=".72"/></g>
+  <text x="64" y="86" fill="#fff" font-family="system-ui,sans-serif" font-weight="800" font-size="34">LOOKCOOK · 今日好好吃饭</text>
+  <text x="64" y="582" fill="#fff" font-family="system-ui,sans-serif" font-weight="900" font-size="70">凉拌黄瓜</text>
+</svg>

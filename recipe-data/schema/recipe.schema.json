@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookcook.github.io/schema/recipe.schema.json",
+  "title": "LookCook Recipe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "id", "title", "aliases", "pinyin", "initials", "summary",
+    "tags", "nutritionTags", "time", "difficulty", "servings", "ingredients",
+    "steps", "coverImage", "author", "source", "license", "copyrightStatus",
+    "reviewStatus", "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 2, "maxLength": 40 },
+    "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "pinyin": { "type": "string", "pattern": "^[a-z]+$" },
+    "initials": { "type": "string", "pattern": "^[a-z]+$" },
+    "emoji": { "type": "string" },
+    "colors": {
+      "type": "array",
+      "prefixItems": [{ "type": "string" }, { "type": "string" }],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "summary": { "type": "string", "minLength": 10, "maxLength": 100 },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "nutritionTags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "time": { "type": "integer", "minimum": 1, "maximum": 600 },
+    "difficulty": { "enum": ["简单", "普通", "进阶"] },
+    "servings": { "type": "integer", "minimum": 1, "maximum": 20 },
+    "ingredients": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "amount", "unit", "note"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "amount": { "type": "number", "exclusiveMinimum": 0 },
+          "unit": { "type": "string", "minLength": 1 },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["order", "title", "text", "image"],
+        "properties": {
+          "order": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" },
+          "text": { "type": "string", "minLength": 8 },
+          "image": { "type": "string" }
+        }
+      }
+    },
+    "coverImage": { "type": "string" },
+    "author": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "license": { "type": "string", "minLength": 1 },
+    "copyrightStatus": { "type": "string", "minLength": 1 },
+    "reviewStatus": { "type": "string", "minLength": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

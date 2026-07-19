@@ -1,0 +1,26 @@
+{
+  "name": "@lookcook/local-admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node ../scripts/clean-build-output.mjs local-admin && vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "eslint": "^9.31.0",
+    "eslint-plugin-vue": "^10.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vite": "^7.0.6",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.0.4"
+  }
+}

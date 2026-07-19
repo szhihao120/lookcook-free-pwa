@@ -1,0 +1,22 @@
+{
+  "name": "lookcook-free-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "prepare:data": "node scripts/build-recipe-data.mjs",
+    "validate:data": "node scripts/validate-recipe-data.mjs",
+    "typecheck": "pnpm --filter @lookcook/app typecheck && pnpm --filter @lookcook/local-admin typecheck",
+    "lint": "pnpm --filter @lookcook/app lint && pnpm --filter @lookcook/local-admin lint",
+    "test": "pnpm prepare:data && pnpm --filter @lookcook/app test",
+    "build": "pnpm prepare:data && pnpm validate:data && pnpm --filter @lookcook/app build && pnpm --filter @lookcook/local-admin build",
+    "dev": "pnpm prepare:data && pnpm --filter @lookcook/app dev",
+    "dev:admin": "pnpm prepare:data && pnpm --filter @lookcook/local-admin dev",
+    "preview": "pnpm --filter @lookcook/app preview",
+    "test:e2e": "pnpm --filter @lookcook/app test:e2e",
+    "release": "node scripts/create-release.mjs",
+    "scan:secrets": "node scripts/scan-secrets.mjs"
+  }
+}
