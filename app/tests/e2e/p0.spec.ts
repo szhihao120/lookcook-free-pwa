@@ -6,7 +6,7 @@ test('search, recommend, details, favorite and history work', async ({ page }) =
   await page.getByRole('searchbox', { name: '搜索菜谱' }).fill('fqcd')
   await expect(page.getByRole('heading', { name: '番茄炒蛋' })).toBeVisible()
 
-  await page.goto('/ingredients')
+  await page.goto('/#/ingredients')
   await page.getByRole('button', { name: /番茄/ }).click()
   await page.getByRole('button', { name: /鸡蛋/ }).click()
   await page.getByRole('button', { name: /看看能做什么/ }).click()
@@ -14,7 +14,7 @@ test('search, recommend, details, favorite and history work', async ({ page }) =
   await page.getByRole('heading', { name: '番茄炒蛋' }).click()
   await expect(page.getByRole('heading', { name: '食材清单' })).toBeVisible()
   await page.getByRole('button', { name: '收藏' }).click()
-  await page.goto('/library')
+  await page.goto('/#/library')
   await expect(page.getByRole('heading', { name: '番茄炒蛋' })).toBeVisible()
 })
 
