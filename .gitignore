@@ -13,6 +13,7 @@ release/*.sha256
 release/lookcook-p0/
 reports/evidence/lighthouse/*.html
 reports/evidence/lighthouse/*.json
+reports/evidence/github-auth/
 app/public/data/
 app/public/covers/
 local-admin/public/data/

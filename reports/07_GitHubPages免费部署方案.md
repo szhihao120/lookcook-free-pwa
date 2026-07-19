@@ -2,9 +2,9 @@
 
 ## 目标
 
-- 仓库：建议 `lookcook-free-pwa`
+- 仓库：`https://github.com/szhihao120/lookcook-free-pwa`
 - 分支：`main`
-- 地址：部署后为 `https://<github-user>.github.io/lookcook-free-pwa/`
+- 地址：`https://szhihao120.github.io/lookcook-free-pwa/`
 - 自定义域名：无
 
 ## 工作流
@@ -38,6 +38,14 @@
 
 ## 当前发布状态
 
-本地 Git 仓库、提交和工作流已准备。GitHub 页面会话未能稳定读取登录状态；如本机
-尚未授权 GitHub，需要完成一次官方登录/授权后才能创建公开仓库并获得实际 Pages
-地址。此处在发布后回填。
+已发布并完成线上验证：
+
+- 仓库为公开仓库；
+- Quality 工作流成功；
+- Deploy GitHub Pages 工作流成功；
+- 首页、manifest、数据清单、Service Worker 均为 HTTP 200；
+- 直接打开并刷新 `#/recipes/tomato-scrambled-eggs` 成功；
+- 刷新后页面由 Service Worker 控制。
+
+线上机器验证记录：
+`C:\Users\EDY\Documents\LookCook免费联网版\reports\evidence\live-pages-verification.json`
