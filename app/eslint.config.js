@@ -28,14 +28,17 @@ export default [
     }
   },
   {
-    files: ['**/*.{ts,js}'],
+    files: ['**/*.{ts,js,mjs}'],
     languageOptions: {
       parser: tseslint.parser,
       globals: {
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
-        Event: 'readonly'
+        Event: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly'
       }
     },
     rules: { '@typescript-eslint/no-explicit-any': 'off' }
